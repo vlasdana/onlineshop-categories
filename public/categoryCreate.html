@@ -19,6 +19,27 @@
           <textarea id="category_description" name="description"></textarea
           ><br />
         </div>
+
+        <div class="form-group">
+          <label for="category_active">Active:</label><br />
+          <input type="checkbox" id="checkbox" name="is_active" /><br />
+        </div>
+        <div class="form-group">
+          <label for="category_imageurl">Image URL:</label><br />
+          <input type="url" id="category_imageurl" name="image_url" /><br />
+        </div>
+        <div class="form-group">
+          <label for="category_priority">Priority:</label><br />
+          <input
+            type="number"
+            id="category_priority"
+            name="priority"
+            required
+            min="1"
+            max="20"
+          /><br />
+        </div>
+
         <div class="form-box">
           <button id="save-btn" type="submit">Save</button>
           <button id="reset-btn" type="reset">Refresh</button>

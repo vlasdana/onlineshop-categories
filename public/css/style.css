@@ -56,7 +56,8 @@ table {
   margin-top: 20px;
 }
 
-th, td {
+th,
+td {
   border: 1px solid #ddd;
   padding: 12px;
   text-align: left;
@@ -82,25 +83,35 @@ th {
 label {
   display: block;
   font-weight: bold;
-  color: #ddd;
-  font-size: 2em;
+  color: #ffffff;
+  font-size: 1.5em;
 }
 
 input {
-  width: calc(50% - 12px);
+  width: calc(50% -12px);
   height: 50px;
+  padding-left: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 2em;
+  font-size: 1.5em;
+  background-color: #e5e0e0;
 }
 
 textarea {
-  width: calc(100% - 12px);
+  /* width: calc(100% - 16px);*/
+  width: 80%;
   height: 150px;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1.5em;
+  background-color: #e5e0e0;
+}
+#checkbox {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 15px;
 }
 
 #save-btn {

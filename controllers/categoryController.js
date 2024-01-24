@@ -23,7 +23,7 @@ export async function updateCategory(req, res) {
   try {
     const { id } = req.params;
     const { categoryName, categoryDescription, image_url, priority } = req.body;
-    const isActive = req.body.is_active === 'on';
+    const isActive = req.body.is_active === "on";
 
     const existingCategoryData = await Category.getCategoryById(id);
     const existingCategory = new Category({ ...existingCategoryData });
@@ -33,7 +33,7 @@ export async function updateCategory(req, res) {
       description: categoryDescription,
       is_active: isActive,
       image_url: image_url,
-      priority
+      priority,
     });
 
     console.log("existingCategory before update: ", existingCategory);
@@ -41,7 +41,7 @@ export async function updateCategory(req, res) {
     const categoryUpdateSuccessful = await existingCategory.update(id);
 
     console.log("existingCategory after update: ", existingCategory);
-    if(categoryUpdateSuccessful) {
+    if (categoryUpdateSuccessful) {
       res.render("categoryUpdateSuccess");
     } else {
       res.status(500).send("Internal Server Error: Category update failed.");
@@ -54,13 +54,14 @@ export async function updateCategory(req, res) {
 
 export async function saveCategory(req, res) {
   try {
-    const { categoryName, categoryDescription, isActive, imageUrl, priority } =
-      req.body;
+    const { name, description, image_url, priority } = req.body;
+    const is_active = req.body.is_active === "on";
+
     const category = new Category(
-      categoryName,
-      categoryDescription,
-      isActive,
-      imageUrl,
+      name,
+      description,
+      is_active,
+      image_url,
       priority
     );
     await category.save();
