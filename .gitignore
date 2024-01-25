@@ -1,0 +1,22 @@
+# Node.js
+node_modules/
+
+# Dependency directories
+/config/config.json
+
+# macOS
+.DS_Store
+
+# Logs
+logs
+*.log
+
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+build/Release
+
+# Local files
+.env
+
+# IDE files
+.idea/
+.vscode/
